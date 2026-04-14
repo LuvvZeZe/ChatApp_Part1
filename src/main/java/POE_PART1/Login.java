@@ -43,4 +43,27 @@ public boolean checkPasswordComplexity() {
 
     return hasUpperCase && hasDigit && hasSpecialChar;
 }
+public boolean checkCellPhoneNumber() {
+    if (cellPhoneNumber == null) {
+        return false;
+    }
+
+    if (!cellPhoneNumber.startsWith("+27")) {
+        return false;
+    }
+
+    String digits = cellPhoneNumber.substring(3);
+
+    if (digits.length() != 9) {
+        return false;
+    }
+
+    for (char c : digits.toCharArray()) {
+        if (!Character.isDigit(c)) {
+            return false;
+        }
+    }
+
+    return true;
+}
 }
