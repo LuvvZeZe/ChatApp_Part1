@@ -82,4 +82,16 @@ public String registerUser() {
 
     return "Username successfully captured.\nPassword successfully captured.\nCell phone number successfully added.";
 }
+
+public boolean loginUser(String enteredUsername, String enteredPassword) {
+    return enteredUsername.equals(username) && enteredPassword.equals(password);
+}
+
+public String returnLoginStatus(boolean status) {
+    if (status) {
+        return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+    } else {
+        return "Username or password incorrect, please try again.";
+    }
+}
 }
