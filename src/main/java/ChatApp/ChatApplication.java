@@ -11,21 +11,21 @@ public class ChatApplication {
         System.out.println("Chat Application - Part 1");
         
        
-         Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-          System.out.print("Enter first name: ");
-           String firstName = input.nextLine();
+        System.out.print("Enter first name: ");
+        String firstName = input.nextLine();
 
-         System.out.print("Enter last name: ");
-         String lastName = input.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = input.nextLine();
 
-         System.out.print("Enter username: ");
-         String username = input.nextLine();
+        System.out.print("Enter username: ");
+        String username = input.nextLine();
 
-         System.out.print("Enter password: ");
-         String password = input.nextLine();
+        System.out.print("Enter password: ");
+        String password = input.nextLine();
 
-        System.out.print("Enter cell number (+27...): ");
+        System.out.print("Enter cell number (+27): ");
         String cell = input.nextLine();
 
         Login user = new Login(username, password, cell, firstName, lastName);

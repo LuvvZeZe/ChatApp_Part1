@@ -5,9 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginTest {
 
-    // =========================
-    // assertEquals TESTS
-    // =========================
 
     @Test
     public void testUsernameCorrectlyFormatted() {
@@ -57,9 +54,6 @@ public class LoginTest {
         assertEquals(expected, user.registerUser());
     }
 
-    // =========================
-    // assertTrue / assertFalse TESTS
-    // =========================
 
     @Test
     public void testLoginSuccessful() {
