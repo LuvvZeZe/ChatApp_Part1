@@ -31,6 +31,17 @@ public class ChatApp {
         Login user = new Login(username, password, cell, firstName, lastName);
 
         System.out.println(user.registerUser());
+        
+        System.out.println("\nLogin Section");
+
+        System.out.print("Enter username: ");
+        String loginUser = input.nextLine();
+
+        System.out.print("Enter password: ");
+        String loginPass = input.nextLine();
+
+        boolean status = user.loginUser(loginUser, loginPass);
+         ystem.out.println(user.returnLoginStatus(status));
     }
     
 }
