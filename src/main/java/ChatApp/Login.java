@@ -1,5 +1,5 @@
 //Zaneta Bensah
-package POE_PART1;
+package ChatApp;
 
 
 public class Login 
@@ -17,7 +17,7 @@ public class Login
         this.firstName = firstName;
         this.lastName = lastName;
         
-        
+        // Username must contain "_" and be no more than 5 characters
 }
     public boolean checkUserName() {
     return username.contains("_") && username.length() <= 5;
@@ -43,29 +43,13 @@ public boolean checkPasswordComplexity() {
 
     return hasUpperCase && hasDigit && hasSpecialChar;
 }
-public boolean checkCellPhoneNumber() {
-    if (cellPhoneNumber == null) {
-        return false;
+
+//Cell phone validation using REGEX
+    public boolean checkCellPhoneNumber() {
+        return cellPhoneNumber != null
+                && cellPhoneNumber.matches("^\\+27\\d{9}$");
     }
-
-    if (!cellPhoneNumber.startsWith("+27")) {
-        return false;
-    }
-
-    String digits = cellPhoneNumber.substring(3);
-
-    if (digits.length() != 9) {
-        return false;
-    }
-
-    for (char c : digits.toCharArray()) {
-        if (!Character.isDigit(c)) {
-            return false;
-        }
-    }
-
-    return true;
-}
+    
 public String registerUser() {
 
     if (!checkUserName()) {

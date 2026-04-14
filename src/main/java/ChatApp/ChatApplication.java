@@ -1,10 +1,10 @@
 //Zaneta Bensah
-package POE_PART1;
+package ChatApp;
 
 import java.util.Scanner;
 
 
-public class ChatApp {
+public class ChatApplication {
 
 
     public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class ChatApp {
         String loginPass = input.nextLine();
 
         boolean status = user.loginUser(loginUser, loginPass);
-         ystem.out.println(user.returnLoginStatus(status));
+        System.out.println(user.returnLoginStatus(status));
     }
     
 }
