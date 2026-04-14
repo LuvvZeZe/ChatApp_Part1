@@ -16,5 +16,10 @@ public class Login
         this.cellPhoneNumber = cellPhoneNumber;
         this.firstName = firstName;
         this.lastName = lastName;
+        
+        
+}
+    public boolean checkUserName() {
+    return username.contains("_") && username.length() <= 5;
 }
 }
